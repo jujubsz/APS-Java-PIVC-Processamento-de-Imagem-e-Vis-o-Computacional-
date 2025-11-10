@@ -64,7 +64,7 @@ public class SistemaReconhecimentoFacial {
         for (Usuario usuario : gerenciadorUsuarios.getUsuarios()) {
             reconhecedor.treinar(usuario);
         }
-
+        
         reconhecedor.setTreinado(true);
     }
 

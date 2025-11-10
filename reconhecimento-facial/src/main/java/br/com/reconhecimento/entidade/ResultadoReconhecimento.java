@@ -1,11 +1,28 @@
 package br.com.reconhecimento.entidade;
 
+/**
+ * Representa o resultado de uma predição de reconhecimento facial.
+ */
 public class ResultadoReconhecimento {
     private boolean faceDetectada;
     private String nomeUsuario;
     private double confianca;
 
-    public ResultadoReconhecimento() {}
+    public ResultadoReconhecimento() { }
+
+    // Construtor compatível com as chamadas do seu código: (nome, confianca, faceDetectada)
+    public ResultadoReconhecimento(String nomeUsuario, double confianca, boolean faceDetectada) {
+        this.nomeUsuario = nomeUsuario;
+        this.confianca = confianca;
+        this.faceDetectada = faceDetectada;
+    }
+
+    // Opcional: também manter versão alternativa (face, nome, confianca)
+    public ResultadoReconhecimento(boolean faceDetectada, String nomeUsuario, double confianca) {
+        this.faceDetectada = faceDetectada;
+        this.nomeUsuario = nomeUsuario;
+        this.confianca = confianca;
+    }
 
     public boolean isFaceDetectada() {
         return faceDetectada;
